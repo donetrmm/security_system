@@ -1,0 +1,276 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Security System",
+    "dateExported": "2024-04-11T04:25:16.628Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "1a04848b-f932-44ed-aa36-2313f504f39e",
+            "name": "KITS",
+            "containerId": "",
+            "created": "2024-03-31T03:59:49.194Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "14044897-12e2-4fe7-b4c3-28e669742f12",
+            "name": "REPORTES",
+            "containerId": "",
+            "created": "2024-03-31T04:00:29.022Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "318e868f-a0c2-4bcf-a101-52c35293108c",
+            "name": "USUARIOS",
+            "containerId": "",
+            "created": "2024-04-05T00:55:46.727Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "4db06fcc-b3f1-43cd-b01e-18dec41762ae",
+            "name": "AUTH",
+            "containerId": "",
+            "created": "2024-04-05T22:57:11.913Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "38578290-824a-42ec-a359-bf89b23a96bb",
+            "name": "CAMERA-ESP32",
+            "containerId": "",
+            "created": "2024-04-10T00:45:21.482Z",
+            "sortNum": 50000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "dd78f03b-caf9-45b1-a577-82f30dee7fa3",
+            "colId": "0e19eef5-61ff-4587-9e6e-0f99b7129f65",
+            "containerId": "1a04848b-f932-44ed-aa36-2313f504f39e",
+            "name": "GET ALL",
+            "url": "http://localhost:3000/kits",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-03-29T21:44:59.205Z",
+            "modified": "2024-03-29T21:45:16.878Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "20c1be54-a6fa-4d5a-a7b3-23e1d332ada4",
+            "colId": "0e19eef5-61ff-4587-9e6e-0f99b7129f65",
+            "containerId": "1a04848b-f932-44ed-aa36-2313f504f39e",
+            "name": "GET BY ID",
+            "url": "http://localhost:3000/kits/1",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-29T21:46:45.511Z",
+            "modified": "2024-03-29T21:46:53.457Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f7ec379f-47c9-473e-b728-1f14976eb84a",
+            "colId": "0e19eef5-61ff-4587-9e6e-0f99b7129f65",
+            "containerId": "1a04848b-f932-44ed-aa36-2313f504f39e",
+            "name": "CREATE",
+            "url": "http://localhost:3000/kits",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-03-29T21:47:04.302Z",
+            "modified": "2024-03-29T22:25:35.924Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":2004,\n  \"nombre\":\"Sala Tuxtla\",\n  \"status\":\"desactivado\",\n  \"alta\": true,\n  \"lugar\": \"Sala\",\n  \"idPropietario\":\"iskanderramos8@gmail.com\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "183233ba-8fa7-45a7-859b-18eda9971ff3",
+            "colId": "0e19eef5-61ff-4587-9e6e-0f99b7129f65",
+            "containerId": "1a04848b-f932-44ed-aa36-2313f504f39e",
+            "name": "UPDATE",
+            "url": "http://localhost:3000/kits/121212",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-03-29T22:02:52.311Z",
+            "modified": "2024-03-31T01:35:10.666Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":1010,\n  \"nombre\":\"Tuxtla Laguitos\",\n  \"status\":\"activado\",\n  \"alta\": true,\n  \"lugar\": \"Comedor\",\n  \"idPropietario\":\"iskanderramos8@gmail.com\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7245a2be-28d7-4af0-8463-935857d052c2",
+            "colId": "0e19eef5-61ff-4587-9e6e-0f99b7129f65",
+            "containerId": "1a04848b-f932-44ed-aa36-2313f504f39e",
+            "name": "DELETE",
+            "url": "http://localhost:3000/kits/121212",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-03-29T22:26:55.292Z",
+            "modified": "2024-03-29T22:28:15.118Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "56646b8a-f46a-4c1a-8a95-f6802555a334",
+            "colId": "0e19eef5-61ff-4587-9e6e-0f99b7129f65",
+            "containerId": "1a04848b-f932-44ed-aa36-2313f504f39e",
+            "name": "ACTIVAR/DESACTIVAR",
+            "url": "http://localhost:3000/kits/security/1010",
+            "method": "PUT",
+            "sortNum": 60000,
+            "created": "2024-03-29T22:28:48.143Z",
+            "modified": "2024-04-11T04:16:01.227Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3JyZW8iOiJkb25ldEBnbWFpbC5jb20iLCJzZWN1cmVXb3JkIjoic3lzczIwMjQiLCJpYXQiOjE3MTI4MDg5MzIsImV4cCI6MTcxMjgzNzczMn0.StCm7zW_qBE6JoDNaIlbH91kd9AqEFfOK-rwgX4Ljc8"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"activate\":\"activado\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "423bfcb6-9236-4bc2-996e-791e906cd476",
+            "colId": "0e19eef5-61ff-4587-9e6e-0f99b7129f65",
+            "containerId": "14044897-12e2-4fe7-b4c3-28e669742f12",
+            "name": "GET ALL",
+            "url": "http://localhost:3000/reportes",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-03-31T04:01:00.480Z",
+            "modified": "2024-03-31T04:01:25.005Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c8f81532-e302-4a7e-a72e-b0687745a8c7",
+            "colId": "0e19eef5-61ff-4587-9e6e-0f99b7129f65",
+            "containerId": "14044897-12e2-4fe7-b4c3-28e669742f12",
+            "name": "GET BY ID",
+            "url": "http://localhost:3000/reportes/1",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2024-03-31T04:02:19.866Z",
+            "modified": "2024-03-31T04:02:28.056Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b10e7de0-eccd-49c0-93c6-b5c675bad0a6",
+            "colId": "0e19eef5-61ff-4587-9e6e-0f99b7129f65",
+            "containerId": "14044897-12e2-4fe7-b4c3-28e669742f12",
+            "name": "DELETE",
+            "url": "http://localhost:3000/reportes/1",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2024-03-31T04:32:20.804Z",
+            "modified": "2024-03-31T04:34:53.503Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a8effd0a-f42a-4088-987b-d3852abd0820",
+            "colId": "0e19eef5-61ff-4587-9e6e-0f99b7129f65",
+            "containerId": "318e868f-a0c2-4bcf-a101-52c35293108c",
+            "name": "GET ALL",
+            "url": "http://localhost:3000/usuarios",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2024-04-05T00:56:07.963Z",
+            "modified": "2024-04-06T19:21:06.145Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3JyZW8iOiJkb25ldEBnbWFpbC5jb20iLCJpYXQiOjE3MTI0MjgyNjIsImV4cCI6MTcxMjQ1NzA2Mn0.8wjlRuQwP3kG6eAfozYu0u9OUR3XBGIfsYY372uqNck"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "fb9a70d1-1c35-46b8-943d-17ac5869c5ee",
+            "colId": "0e19eef5-61ff-4587-9e6e-0f99b7129f65",
+            "containerId": "318e868f-a0c2-4bcf-a101-52c35293108c",
+            "name": "GET BY CORREO",
+            "url": "http://localhost:3000/usuarios/iskanderramos8@gmail.com",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2024-04-05T00:57:12.317Z",
+            "modified": "2024-04-05T00:58:29.026Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d700d76f-44ad-45a6-99ff-36c1a0bf4f59",
+            "colId": "0e19eef5-61ff-4587-9e6e-0f99b7129f65",
+            "containerId": "318e868f-a0c2-4bcf-a101-52c35293108c",
+            "name": "CREATE",
+            "url": "http://localhost:3000/usuarios",
+            "method": "POST",
+            "sortNum": 120000,
+            "created": "2024-04-05T01:14:25.460Z",
+            "modified": "2024-04-06T18:08:57.808Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"correo\": \"donet@gmail.com\",\n  \"password\": \"brandi12\",\n  \"nombre\": \"Prueba\",\n  \"apellidos\": \"Ramos\",\n  \"domicilio\": \"Domicilio Prueba\",\n  \"telefono\": \"9612223333\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "51e6e034-4d02-4249-84c9-41009857bd1c",
+            "colId": "0e19eef5-61ff-4587-9e6e-0f99b7129f65",
+            "containerId": "4db06fcc-b3f1-43cd-b01e-18dec41762ae",
+            "name": "LOGIN",
+            "url": "http://localhost:3000/auth",
+            "method": "POST",
+            "sortNum": 130000,
+            "created": "2024-04-05T22:57:18.673Z",
+            "modified": "2024-04-06T18:09:10.114Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"correo\": \"donet@gmail.com\",\n  \"password\": \"brandi12\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c844a57f-5047-4515-80ea-2ed2defbb090",
+            "colId": "0e19eef5-61ff-4587-9e6e-0f99b7129f65",
+            "containerId": "38578290-824a-42ec-a359-bf89b23a96bb",
+            "name": "TAKE PHOTO",
+            "url": "http://192.168.100.60/activate",
+            "method": "GET",
+            "sortNum": 140000,
+            "created": "2024-04-10T00:45:36.503Z",
+            "modified": "2024-04-11T01:38:23.395Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
