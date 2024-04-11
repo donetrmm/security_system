@@ -14,7 +14,7 @@ const verifyTokenHelper = verificarTokenController.run.bind(verificarTokenContro
 
 export const kitRouter = express.Router();
 
-kitRouter.get("/", verifyTokenHelper, getAllKitController.run.bind(getAllKitController));
+kitRouter.get("/propietario/:idPropietario", verifyTokenHelper, getAllKitController.run.bind(getAllKitController));
 
 kitRouter.get("/:id", verifyTokenHelper, getByIdKitController.run.bind(getByIdKitController));
 

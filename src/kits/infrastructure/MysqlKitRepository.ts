@@ -3,10 +3,12 @@ import { Kit } from "../domain/Kit";
 import { KitRepository } from "../domain/KitRepository";
 
 export class MysqlKitRepository implements KitRepository {
-  async getAll(): Promise<Kit[] | null> {
-    const sql = "SELECT * FROM kits";
+  async getAll(idPropietario: string): Promise<Kit[] | null> {
+    const sql = "SELECT * FROM kits WHERE idPropietario = ?";
     try {
-      const [data]: any = await query(sql, []);
+    const params: any[] = [idPropietario];
+
+      const [data]: any = await query(sql, params);
       const dataKits = Object.values(JSON.parse(JSON.stringify(data)));
 
       return dataKits.map(

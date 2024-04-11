@@ -5,8 +5,10 @@ export class GetAllKitController {
   constructor(readonly getAllKitUseCase: GetAllKitUseCase) {}
 
   async run(req: Request, res: Response): Promise<void> {
+    const id: string = req.params.idPropietario;
+
     try {
-      const kits = await this.getAllKitUseCase.run();
+      const kits = await this.getAllKitUseCase.run(id);
       
       if (kits) {
         res.status(200).json({
