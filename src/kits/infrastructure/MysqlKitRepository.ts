@@ -35,7 +35,7 @@ export class MysqlKitRepository implements KitRepository {
 
       return new Kit(
         result[0].id,
-        result[0].name,
+        result[0].nombre,
         result[0].status,
         result[0].alta,
         result[0].lugar,
