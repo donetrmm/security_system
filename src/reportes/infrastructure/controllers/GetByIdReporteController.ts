@@ -17,6 +17,7 @@ export class GetByIdReportesController {
             id: reporte.id,
             fecha: reporte.fecha,
             hora: reporte.hora,
+            imagen: reporte.imagen,
             idKit: reporte.idKit,
             camara: reporte.camara,
             movimiento: reporte.movimiento,

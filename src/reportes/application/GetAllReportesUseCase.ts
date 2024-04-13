@@ -4,9 +4,9 @@ import { ReportesRepository } from "../domain/ReportesRepository";
 export class GetAllReportesUseCase {
   constructor(readonly reportesRepository: ReportesRepository) {}
 
-  async run(): Promise<Reportes[] | null> {
+  async run(kitID: number): Promise<Reportes[] | null> {
     try {
-      const result = await this.reportesRepository.getAll();
+      const result = await this.reportesRepository.getAll(kitID);
       return result;
     } catch (error) {
       return null;

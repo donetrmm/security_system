@@ -11,6 +11,6 @@ const verifyTokenHelper = verificarTokenController.run.bind(verificarTokenContro
 
 export const reportesRouter = express.Router();
 
-reportesRouter.get("/", verifyTokenHelper, getAllReportesController.run.bind(getAllReportesController));
+reportesRouter.get("/kit/:kitID", verifyTokenHelper, getAllReportesController.run.bind(getAllReportesController));
 reportesRouter.get("/:id", verifyTokenHelper, getByIdReporteController.run.bind(getByIdReporteController));
 reportesRouter.delete("/:id", verifyTokenHelper, deleteReportesController.run.bind(deleteReportesController));

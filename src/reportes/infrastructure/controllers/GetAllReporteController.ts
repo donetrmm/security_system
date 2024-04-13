@@ -6,8 +6,10 @@ export class GetAllReportesController {
   constructor(readonly getAllReportesUseCase: GetAllReportesUseCase) {}
 
   async run(req: Request, res: Response): Promise<void> {
+    const kitID: number = parseInt(req.params.kitID);
+    
     try {
-      const reportes = await this.getAllReportesUseCase.run();
+      const reportes = await this.getAllReportesUseCase.run(kitID);
       if (reportes)
         res.status(200).send({
           status: "success",
@@ -16,6 +18,7 @@ export class GetAllReportesController {
               id: reportes.id,
               fecha: reportes.fecha,
               hora: reportes.hora,
+              imagen: reportes.imagen,
               idKit: reportes.idKit,
               camara: reportes.camara,
               movimiento: reportes.movimiento,

@@ -3,6 +3,7 @@ export class Reportes {
     readonly id: number,
     readonly fecha: Date,
     readonly hora: string,
+    readonly imagen: string,
     readonly idKit: number,
     readonly camara: boolean,
     readonly movimiento: boolean,
