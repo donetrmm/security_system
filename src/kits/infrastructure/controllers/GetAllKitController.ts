@@ -15,7 +15,7 @@ export class GetAllKitController {
           status: "success",
           data: kits.map((kit) => ({
             id: kit.id,
-            name: kit.nombre,
+            nombre: kit.nombre,
             status: kit.status,
             alta: kit.alta,
             lugar: kit.lugar,

@@ -14,7 +14,7 @@ export class GetByIdKitController {
           status: "success",
           data: {
             id: kit.id,
-            name: kit.nombre,
+            nombre: kit.nombre,
             status: kit.status,
             alta: kit.alta,
             lugar: kit.lugar,
