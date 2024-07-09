@@ -5,7 +5,7 @@ import { AuthRepository } from "../domain/AuthRepository";
 export class MysqlAuthRepository implements AuthRepository {
 
   async login(correo: string): Promise<Auth | null> {
-    const sql = "SELECT * FROM usuarios WHERE correo = ?";
+    const sql = "SELECT * FROM Usuarios WHERE correo = ?";
     const params: any[] = [correo];
     try {
         const [result]: any = await query(sql, params);

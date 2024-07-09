@@ -11,7 +11,6 @@ const config = {
   database: process.env.DB_DATABASE,
   password: process.env.DB_PASSWORD,
   waitForConnections: true,
-  connectionLimit: 10,
 };
 
 const pool = mysql.createPool(config);
@@ -25,6 +24,7 @@ export async function query(sql: string, params: any[]) {
     return result;
   } catch (error) {
     signale.error(error);
+    console.log(error)
     return null;
   }
 }

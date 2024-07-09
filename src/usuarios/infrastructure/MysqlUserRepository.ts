@@ -4,7 +4,7 @@ import { UsuarioRepository } from "../domain/UsuariosRepository";
 
 export class MysqlUsuarioRepository implements UsuarioRepository {
   async getAll(): Promise<Usuario[] | null> {
-    const sql = "SELECT * FROM usuarios";
+    const sql = "SELECT * FROM Usuarios";
     try {
       const [data]: any = await query(sql, []);
       const dataUsers = Object.values(JSON.parse(JSON.stringify(data)));
@@ -26,7 +26,7 @@ export class MysqlUsuarioRepository implements UsuarioRepository {
   }
 
   async getByCorreo(correo: string): Promise<Usuario | null> {
-    const sql = "SELECT * FROM usuarios WHERE correo = ?";
+    const sql = "SELECT * FROM Usuarios WHERE correo = ?";
     const params: any[] = [correo];
     try {
         const [result]: any = await query(sql, params);
@@ -51,7 +51,7 @@ export class MysqlUsuarioRepository implements UsuarioRepository {
 
   async createUser(user: Usuario): Promise<Usuario | null> {
     let createdUser = null;
-    const sql = "INSERT INTO usuarios (correo, password, nombre, apellidos, domicilio, telefono) VALUES (?, ?, ?, ?, ?, ?)";
+    const sql = "INSERT INTO Usuarios (correo, password, nombres, apellidos, domicilio, telefono) VALUES (?, ?, ?, ?, ?, ?)";
     const params: any[] = [user.correo, user.password, user.nombre, user.apellidos, user.domicilio, user.telefono];
     try {
       const [result]: any = await query(sql, params);
@@ -72,7 +72,7 @@ export class MysqlUsuarioRepository implements UsuarioRepository {
 
   async updateUser(correo: string, user: Usuario): Promise<Usuario | null> {
     let updatedUser = null;
-    const sql = "UPDATE usuarios SET id=?, nombre = ?, status = ?, alta = ?, lugar = ?, idPropietario = ? WHERE correo = ?";
+    const sql = "UPDATE usuarios SET id=?, nombres = ?, status = ?, alta = ?, lugar = ?, idPropietario = ? WHERE correo = ?";
     const params: any[] = [user.correo, user.password, user.nombre, user.apellidos, user.domicilio, user.telefono, correo];
     try {
       await query(sql, params);
